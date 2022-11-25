@@ -44,7 +44,7 @@ class AlbumImageController extends Controller
 
 
                 })
-                ->editColumn('image', function ($admin) {
+                ->addColumn('image', function ($admin) {
                     return ' <img height="60px" src="' . get_file($admin->image) . '" class=" w-60 rounded"
                              onclick="window.open(this.src)">';
                 })
