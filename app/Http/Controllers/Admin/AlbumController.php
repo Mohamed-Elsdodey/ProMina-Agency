@@ -41,7 +41,7 @@ class AlbumController extends Controller
 
 
                 })
-                ->editColumn('images', function ($row) {
+                ->addColumn('images', function ($row) {
                     $url = route('admin.getImagesForAlbum', $row->id);
                     return "<a class='btn btn-info' href='$url'>عرض صور الالبوم</a>";
 
